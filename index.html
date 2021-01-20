@@ -5,21 +5,20 @@
 <body>
 	<script>
 
-        let num = Math.floor(Math.random() * 101);
+        let num = Math.floor(Math.random() * 100);
         let trys = 0;
         let input = prompt("guess a number between 1 and 100");
-        let guess = input;
         while(true){
 
-            if(num == guess)
+            if(num == input)
             {
                 alert("Got it! Trys = " + trys);
-            }else if(guess > num){
-                input = prompt("Sorry!  You guessed " + guess + " and the greater than the number.");
+            }else if(input > num){
+                input = prompt("Sorry!  You guessed " + input + ". Pick lower.");
                 trys++;
             }
             else{
-                input = prompt("Sorry!  You guessed " + guess + " and the less than the number.");
+                input = prompt("Sorry!  You guessed " + input + ".  Pick higher.");
                 trys++;
             }
         }
