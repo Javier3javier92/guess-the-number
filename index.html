@@ -13,12 +13,14 @@
 
             if(num == guess)
             {
-                alert("Got it!");
+                alert("Got it! Trys = " + trys);
             }else if(guess > num){
                 input = prompt("Sorry!  You guessed " + guess + " and the greater than the number.");
+                trys++;
             }
             else{
                 input = prompt("Sorry!  You guessed " + guess + " and the less than the number.");
+                trys++;
             }
         }
 
